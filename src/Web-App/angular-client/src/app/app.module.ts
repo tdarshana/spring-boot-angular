@@ -8,13 +8,16 @@ import { User } from './model/user/user.component';
 import { UserListComponent } from './model/user-list/user-list.component';
 import { UserFormComponent } from './model/user-form/user-form.component';
 import { UserService } from './service/user-servce.service';
+import { WeatherComponent } from './model/weather/weather.component';
+import {GeolocationService} from "./service/geolocation.service";
 
 @NgModule({
   declarations: [
     AppComponent,
     User,
     UserListComponent,
-    UserFormComponent
+    UserFormComponent,
+    WeatherComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +25,7 @@ import { UserService } from './service/user-servce.service';
     HttpClientModule,
     FormsModule
   ],
-  providers: [UserService],
+  providers: [UserService, GeolocationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
